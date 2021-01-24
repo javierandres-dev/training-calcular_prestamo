@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/javierandresgp/github_pages-calcular_prestamo/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/javierandresgp/github_pages-calcular_prestamo/static/js/main.6976eabf.chunk.js",
+    "main.js.map": "/javierandresgp/github_pages-calcular_prestamo/static/js/main.6976eabf.chunk.js.map",
+    "runtime-main.js": "/javierandresgp/github_pages-calcular_prestamo/static/js/runtime-main.2a39dfcd.js",
+    "runtime-main.js.map": "/javierandresgp/github_pages-calcular_prestamo/static/js/runtime-main.2a39dfcd.js.map",
+    "static/js/2.7599c84a.chunk.js": "/javierandresgp/github_pages-calcular_prestamo/static/js/2.7599c84a.chunk.js",
+    "static/js/2.7599c84a.chunk.js.map": "/javierandresgp/github_pages-calcular_prestamo/static/js/2.7599c84a.chunk.js.map",
+    "static/js/3.63fb59fc.chunk.js": "/javierandresgp/github_pages-calcular_prestamo/static/js/3.63fb59fc.chunk.js",
+    "static/js/3.63fb59fc.chunk.js.map": "/javierandresgp/github_pages-calcular_prestamo/static/js/3.63fb59fc.chunk.js.map",
+    "index.html": "/javierandresgp/github_pages-calcular_prestamo/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/javierandresgp/github_pages-calcular_prestamo/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.7599c84a.chunk.js.LICENSE.txt": "/javierandresgp/github_pages-calcular_prestamo/static/js/2.7599c84a.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/javierandresgp/github_pages-calcular_prestamo/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a39dfcd.js",
+    "static/js/2.7599c84a.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.6976eabf.chunk.js"
+  ]
+}
