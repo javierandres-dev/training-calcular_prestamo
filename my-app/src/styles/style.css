@@ -1,0 +1,109 @@
+/* CUSTOM PROPERTIES
+  ============================= */
+:root {
+  --f-family-base: sans-serif;
+  --f-size-xs: 1rem;
+  --f-size-s: 1.3rem;
+  --f-size-base: 1.6rem;
+  --f-size-l: 1.9rem;
+  --f-size-xl: 2.2rem;
+  --f-weight-base: normal;
+}
+/* BASE
+  ============================= */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--f-family-base);
+  font-size: var(--f-size-base);
+  font-weight: var(--f-weight-base);
+}
+/* HEADER
+  ============================= */
+.header {
+  text-align: center;
+}
+.header h1 {
+  font-size: var(--f-size-l);
+}
+/* MAIN
+  ============================= */
+.container {
+  width: 92%;
+  margin: auto;
+}
+.lead {
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form fieldset {
+}
+.form legend {
+  text-align: center;
+  font-size: var(--f-size-s);
+  margin-bottom: 1rem;
+}
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form span {
+  margin-right: 0.5rem;
+}
+.form input {
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: thin solid gray;
+}
+.form button {
+  margin: 1rem;
+}
+.error {
+  text-align: center;
+  background-color: yellow;
+  padding: 1rem;
+}
+/* DEVELOPER
+  ============================= */
+.dev {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  color: gray;
+  padding: 8px 16px;
+}
+.dev .top {
+  text-align: left;
+}
+.dev .bottom {
+  text-align: right;
+}
+.dev a {
+  color: #05a6f1;
+}
+.dev a:link {
+  text-decoration: none;
+}
+.dev a:visited {
+  font-style: italic;
+}
+.dev a:hover {
+  text-decoration: underline;
+}
+.dev a:active {
+  font-style: italic;
+  text-decoration: underline;
+  color: gray;
+}
