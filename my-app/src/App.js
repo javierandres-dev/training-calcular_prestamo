@@ -2,25 +2,48 @@ import React, { Fragment, useState } from "react";
 import Top from "./components/Top";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import { Instructions, Summary } from "./components/Aside";
+import Spinner from "./components/Spinner";
 import Bottom from "./components/Bottom";
-//
+
 const App = () => {
   // define state
-  const [loan, saveLoan] = useState(0),
-    [interest, saveInterest] = useState(0),
-    [deadline, saveDeadline] = useState(0);
+  const [loading, setLoading] = useState(false),
+    [loan, setLoan] = useState(0),
+    [interest, setInterest] = useState(0),
+    [deadline, setDeadline] = useState(0),
+    [monthlyPayment, setMonthlyPayment] = useState(0);
+  // switch component
+  let component = undefined;
+  if (loading) {
+    component = <Spinner />;
+  } else if (monthlyPayment === 0) {
+    component = <Instructions />;
+  } else {
+    component = (
+      <Summary
+        loan={loan}
+        interest={interest}
+        deadline={deadline}
+        monthlyPayment={monthlyPayment}
+      />
+    );
+  }
   return (
     <Fragment>
       <Top />
       <Header />
       <Main
+        setLoading={setLoading}
         loan={loan}
-        saveLoan={saveLoan}
+        setLoan={setLoan}
         interest={interest}
-        saveInterest={saveInterest}
+        setInterest={setInterest}
         deadline={deadline}
-        saveDeadline={saveDeadline}
+        setDeadline={setDeadline}
+        setMonthlyPayment={setMonthlyPayment}
       />
+      {component}
       <Bottom />
     </Fragment>
   );

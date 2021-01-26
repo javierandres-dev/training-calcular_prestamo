@@ -1,7 +1,21 @@
-/* CUSTOM PROPERTIES
+/* SUMMARY
+0. Custom properties
+1. Base
+2. Header
+3. Main
+4. Aside
+5. Developer
+
+  0. CUSTOM PROPERTIES
   ============================= */
 :root {
-  --f-family-base: sans-serif;
+  --c-primary: #2d6a4f;
+  --c-light: #d8f3dc;
+  --c-dark: #081c15;
+  --f-family-base: "Oxygen", sans-serif;
+  --f-weight-light: 300;
+  --f-weight-base: 400;
+  --f-weight-bold: 700;
   --f-size-xs: 1rem;
   --f-size-s: 1.3rem;
   --f-size-base: 1.6rem;
@@ -9,7 +23,7 @@
   --f-size-xl: 2.2rem;
   --f-weight-base: normal;
 }
-/* BASE
+/* 1. BASE
   ============================= */
 html {
   font-size: 62.5%;
@@ -25,23 +39,29 @@ body {
   font-family: var(--f-family-base);
   font-size: var(--f-size-base);
   font-weight: var(--f-weight-base);
+  color: var(--c-dark);
+  line-height: 1.4;
 }
-/* HEADER
+/* 2. HEADER
   ============================= */
 .header {
   text-align: center;
+  background-color: var(--c-primary);
+  color: var(--c-light);
+  padding: 0.5rem;
 }
 .header h1 {
   font-size: var(--f-size-l);
 }
-/* MAIN
+/* 3. MAIN
   ============================= */
 .container {
-  width: 92%;
+  width: min(92%, 48rem);
   margin: auto;
 }
 .lead {
-  text-align: center;
+  font-size: var(--f-size-l);
+  font-weight: var(--f-weight-light);
 }
 .form {
   display: flex;
@@ -49,11 +69,16 @@ body {
   align-items: center;
 }
 .form fieldset {
+  width: min(92%, 32rem);
+  border-color: var(--c-light);
+  border-radius: 1rem;
 }
 .form legend {
   text-align: center;
   font-size: var(--f-size-s);
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  color: var(--c-primary);
 }
 .form label {
   display: block;
@@ -61,21 +86,60 @@ body {
 }
 .form span {
   margin-right: 0.5rem;
+  font-weight: var(--f-weight-light);
+  color: var(--c-primary);
 }
 .form input {
   margin-bottom: 1rem;
   border: none;
-  border-bottom: thin solid gray;
+  border-bottom: thin solid var(--c-light);
+}
+.form input[name="loan"],
+.form input[name="interest"] {
+  width: 90%;
+}
+.form input[name="deadline"] {
+  width: 78%;
 }
 .form button {
   margin: 1rem;
-}
-.error {
-  text-align: center;
-  background-color: yellow;
+  background-color: var(--c-primary);
+  color: var(--c-light);
+  border: none;
   padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: var(--f-weight-bold);
+  outline: none;
 }
-/* DEVELOPER
+.warning {
+  text-align: center;
+  background-color: var(--c-light);
+  color: var(--c-primary);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+/* 4. ASIDE
+  ============================= */
+.instructions h3,
+.summary h3 {
+  text-align: center;
+  font-size: var(--f-size-l);
+  font-weight: var(--f-weight-bold);
+}
+.instructions ol {
+  color: var(--c-primary);
+}
+.summary ul {
+  list-style: none;
+}
+.summary .fas {
+  margin-right: 1rem;
+  color: var(--c-primary);
+}
+.summary span {
+  color: var(--c-primary);
+}
+/* 5. DEVELOPER
   ============================= */
 .dev {
   font-family: sans-serif;

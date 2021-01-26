@@ -1,3 +1,4 @@
+// calculates the payment for a loan based on constant payments and a constant interest rate
 export const calculate = (loan, interest, deadline) => {
   const pv = loan,
     rate = interest / 100,
@@ -6,9 +7,14 @@ export const calculate = (loan, interest, deadline) => {
     //    type = 0,
     p1 = rate * (1 + rate) ** nper,
     p2 = (1 + rate) ** nper - 1,
-    payment = pv * (p1 / p2),
-    total = payment * nper;
-  return [payment, total];
-  //console.log(pv, rate, nper, fv, type);
-  //console.log(payment, total);
+    monthlyPayment = pv * (p1 / p2);
+  return monthlyPayment;
+};
+// set format to the numbers to print UI
+export const formatNumber = (number) => {
+  return number
+    .toFixed(2)
+    .toString()
+    .replace(".", ",")
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 };
